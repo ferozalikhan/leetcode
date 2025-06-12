@@ -44,4 +44,5 @@ function productExceptSelf(nums) {
 }
 
 let nums = [-1,0,1,2,3];
-console.log(productExceptSelf(nums))
+console.log(productExceptSelf(nums)); 
+console.log(productExceptSelf2(nums));
