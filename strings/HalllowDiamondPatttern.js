@@ -1,6 +1,6 @@
 function hallowDiamond()
 {
-    let n = 4; 
+    let n = 6; 
     // top loop
     for(let i = 1; i <= n; i ++)
     {
