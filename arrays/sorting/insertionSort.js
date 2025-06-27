@@ -24,5 +24,5 @@ console.log(insertionSort([2,5,9,3,7,4,11,13]))
 
 
 // more test cases
-console.log(insertionSort([5, 2, 9, 1, 5, 6])); // Output: [1, 2, 5, 5, 6, 9]
+console.log(insertionSort([5, 1,4,3,2])); // Output: [1, 2, 5, 5, 6, 9]
 console.log(insertionSort([3, 0, 2, 5, -1, 4, 1])); // Output: [-1, 0, 1, 2, 3, 4, 5]
