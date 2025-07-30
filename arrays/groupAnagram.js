@@ -74,6 +74,26 @@ function groupAnagrams2(strs) {
     return Object.values(map);
 }
 
-const array = ["act","pots","tops","cat","stop","hat"];
+function groupAnagramsV2(strs)
+{
+    let anagramMap = new Map(); // n space
+    
+    for(let i = 0; i < strs.length; i ++)
+    {
+        const sortedStr = strs[i].split("").sort().join("");
+        if(anagramMap.has(sortedStr))
+        {
+            const subArray= anagramMap.get(sortedStr);
+            subArray.push(strs[i]);
+        }
+        else
+            // create a new array for this sorted string
+        anagramMap.set(sortedStr, [strs[i]]);
+    }
 
-console.log(groupAnagrams2(array));
+ return Array.from(anagramMap.values()); // convert map values to array
+}
+
+const array = ["act","pots","tops","cat","stop","hat"]; // answer should be [["act", "cat"], ["pots", "tops", "stop"], ["hat"]]
+
+console.log(groupAnagramsV2(array)); // Output: [ [ 'act', 'cat' ], [ 'pots', 'tops', 'stop' ], [ 'hat' ] ]
